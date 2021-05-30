@@ -1,5 +1,5 @@
 # DNS-FORWARDER
-Repo containing Terraform code that provisions Route 53 record(s) that forward code from one domain to another.
+Repo containing Terraform code that provisions S3 buckets and Route 53 record(s) that forward code from one domain to another.
 
 ## TODOS
 
@@ -11,3 +11,5 @@ Repo containing Terraform code that provisions Route 53 record(s) that forward c
 ### FUTURE STATE TODOS
 
 - Rework to make the code a little DRYer. Ideally use modules and/or for_each for the buckets and Route 53 rules.
+
+![Checkov Workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
