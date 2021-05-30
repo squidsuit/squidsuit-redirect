@@ -12,4 +12,4 @@ Repo containing Terraform code that provisions S3 buckets and Route 53 record(s)
 
 - Rework to make the code a little DRYer. Ideally use modules and/or for_each for the buckets and Route 53 rules.
 
-![Checkov Workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Checkov GitHub Action](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
