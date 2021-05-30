@@ -17,6 +17,15 @@ resource "aws_s3_bucket" "ssbucket" {
 
 }
 
+resource "aws_s3_bucket" "www" {
+    bucket = "www.${var.domain_name}"
+    acl = "public-read"
+
+    website {
+        redirect_all_requests_to = var.domain_name
+    }
+}
+
 resource "aws_s3_bucket" "logbucket" {
     bucket = "dns-forwarder-log-bucket"
     acl = "log-delivery-write"
