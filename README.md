@@ -9,10 +9,10 @@ Provision S3 buckets and Route 53 record(s) to forward traffic from one domain t
 ### SOON:tm:
 
 - Add KMS encryption to the buckets.
-- Add HTTPS.
+- Allow HTTPS original connections to redirect as well.
 - Test my project works for new domain(s).
 - Map steps to set this up in the README.
 
 ### LATER
 
-- Make code DRYer. Ideally use modules and/or for_each for the buckets and Route 53 rules.
+- Look into making this a module if it makes sense. Maybe.
