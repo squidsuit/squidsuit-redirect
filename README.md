@@ -1,4 +1,4 @@
-# DNS-FORWARDER
+# TF-URL-REDIRECT
 
 [![Checkov GitHub Action](https://github.com/squidsuit/dns-forwarder/actions/workflows/github-action-workflow.yml/badge.svg)](https://github.com/squidsuit/dns-forwarder/actions/workflows/github-action-workflow.yml)
 
@@ -8,6 +8,7 @@ Provision S3 buckets and Route 53 record(s) to forward traffic from one domain t
 
 ### SOON:tm:
 
+- Add TFLint GitHub action.
 - Add KMS encryption to the buckets.
 - Allow HTTPS original connections to redirect as well.
 - Test my project works for new domain(s).
