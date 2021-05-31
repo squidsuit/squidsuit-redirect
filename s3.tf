@@ -44,23 +44,3 @@ resource "aws_s3_bucket" "logbucket" {
     }
 
 }
-resource "aws_s3_bucket_policy" "publicread" {
-    bucket = aws_s3_bucket.ssbucket.id
-
-    policy = <<EOF
-{
-"Version": "2008-10-17",
-"Statement": [
-    {
-    "Sid": "PublicReadForGetBucketObjects",
-    "Effect": "Allow",
-    "Principal": {
-        "AWS": "*"
-    },
-    "Action": "s3:GetObject",
-    "Resource": "arn:aws:s3:::${aws_s3_bucket.ssbucket.id}/*"
-    }
-]
-}
-EOF
-}
