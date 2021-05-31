@@ -1,38 +1,25 @@
 resource "aws_s3_bucket" "ssbucket" {
-    bucket = var.domain_name
+    for_each = {
+        fqdn = "${var.domain_name}",
+        www-fqdn = "www.${var.domain_name}"
+    }
+
+    bucket = each.value
     acl    = "public-read"
 
     versioning {
         enabled = true
     }
 
-    logging {
-        target_bucket = aws_s3_bucket.logbucket.id
-        target_prefix = "log/${var.domain_name}/"
-    }
-
     website {
         redirect_all_requests_to = var.redirect_target
     }
 
-}
-
-resource "aws_s3_bucket" "www" {
-    bucket = "www.${var.domain_name}"
-    acl = "public-read"
-
-    versioning {
-        enabled = true
-    }
-
     logging {
         target_bucket = aws_s3_bucket.logbucket.id
-        target_prefix = "log/www.${var.domain_name}/"
+        target_prefix = "log/${each.value}/"
     }
 
-    website {
-        redirect_all_requests_to = var.domain_name
-    }
 }
 
 resource "aws_s3_bucket" "logbucket" {
