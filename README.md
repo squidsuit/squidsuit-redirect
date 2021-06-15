@@ -9,7 +9,6 @@ Use Terraform to provision S3 buckets and Route 53 record(s) to redirect traffic
 ### SOON:tm:
 
 - Add TFLint GitHub action.
-- Add KMS encryption to the buckets.
 - Test the project works for new domain(s).
 - Map steps to set this up in the README.
 
