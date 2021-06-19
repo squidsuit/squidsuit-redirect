@@ -3,8 +3,8 @@ resource "aws_route53_zone" "main" {
 }
 
 resource "aws_route53_record" "record" {
-  for_each = aws_s3_bucket.ssbucket
-  name    = aws_s3_bucket.ssbucket[each.key].id
+  for_each = aws_s3_bucket.bucket
+  name    = aws_s3_bucket.bucket[each.key].id
   zone_id = aws_route53_zone.main.zone_id
   type    = "A"
   

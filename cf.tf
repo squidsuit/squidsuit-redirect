@@ -1,11 +1,11 @@
 locals {
-  target_origin_id = aws_s3_bucket.ssbucket["fqdn"].id
+  target_origin_id = aws_s3_bucket.bucket["fqdn"].id
 }
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name = aws_s3_bucket.ssbucket["fqdn"].website_endpoint
-    origin_id   = aws_s3_bucket.ssbucket["fqdn"].id
+    domain_name = aws_s3_bucket.bucket["fqdn"].website_endpoint
+    origin_id   = aws_s3_bucket.bucket["fqdn"].id
 
     custom_origin_config {
       http_port = "80"

@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "ssbucket" {
+resource "aws_s3_bucket" "bucket" {
     for_each = {
         fqdn = "${var.domain_name}",
         www-fqdn = "www.${var.domain_name}"
