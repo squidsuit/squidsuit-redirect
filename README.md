@@ -1,4 +1,4 @@
-# TERRAFORM-AWS-S3-CF-REDIRECT
+# SQUIDSUIT-REDIRECT
 
 [![Checkov GitHub Action](https://github.com/squidsuit/dns-forwarder/actions/workflows/github-action-workflow.yml/badge.svg)](https://github.com/squidsuit/dns-forwarder/actions/workflows/github-action-workflow.yml)
 
