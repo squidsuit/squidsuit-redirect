@@ -1,8 +1,8 @@
-# TF-URL-REDIRECT
+# TERRAFORM-AWS-S3-CF-REDIRECT
 
 [![Checkov GitHub Action](https://github.com/squidsuit/dns-forwarder/actions/workflows/github-action-workflow.yml/badge.svg)](https://github.com/squidsuit/dns-forwarder/actions/workflows/github-action-workflow.yml)
 
-Use Terraform to provision S3 buckets and Route 53 record(s) to redirect traffic from one domain to another.
+Use Terraform to provision S3 buckets and Route 53 record(s) to redirect traffic from one domain to another. Now supports HTTPS via CloudFront.
 
 ## TODOS
 
